@@ -65,24 +65,6 @@ export class OrdersService {
      * @returns Order
      * @throws ApiError
      */
-    public static ordersUpdate(
-        id: string,
-        requestBody: Order,
-    ): CancelablePromise<Order> {
-        return __request({
-            method: 'PUT',
-            path: `/orders/${id}/`,
-            body: requestBody,
-            mediaType: 'application/json',
-        });
-    }
-
-    /**
-     * @param id
-     * @param requestBody
-     * @returns Order
-     * @throws ApiError
-     */
     public static ordersPartialUpdate(
         id: string,
         requestBody?: PatchedOrder,
